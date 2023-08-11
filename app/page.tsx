@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function Home():JSX.Element {
+  const a = 1;
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -82,9 +83,11 @@ export default function Home():JSX.Element {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <a href="#">Powered by{a}</a>
           <h2>
             Deploy <span>-&gt;</span>
           </h2>
+          
           <p>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
