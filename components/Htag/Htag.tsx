@@ -1,7 +1,7 @@
-import { HtagProps } from "./Htag.props";
+import { IHtagProps } from "./Htag.props";
 import styles from "./Htag.module.css";
 
-export const Htag = ({ tag, children }: HtagProps): JSX.Element => {
+export const Htag = ({ tag, children }: IHtagProps): JSX.Element => {
   switch (tag) {
     case "h1":
       return <h1 className={styles.headerH1}>{children}</h1>;
