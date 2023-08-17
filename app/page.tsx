@@ -1,3 +1,5 @@
+
+import { Htag } from '@/components';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Привет-я переопределенный тайтл',
@@ -14,7 +16,9 @@ export default function Home():JSX.Element {
   return (
     <main >
       <div >
-      <h1>AVC</h1>
+      <Htag tag="h1">Текст</Htag>
+      <Htag tag="h2">Текст</Htag>
+      <Htag tag="h3">Текст</Htag>
       </div>
     </main>
   );
