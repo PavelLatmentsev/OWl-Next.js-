@@ -20,9 +20,12 @@ a {
 	--black:#3b434e;
 	--white: white;
 	--primary:#7653FC;
+	--primary-hover:#4730a7;
+	--ghost-hover:#b1b0b4;
 	--red:#FC836D;
 	--green:#1DC37E;
 	--green-light: #C8F8E4;
 	--font-family: 'Noto Sans', sans-serif;
 	--background:#F5F6F8;
+	--gray-light:#EBEBEB;
 }
