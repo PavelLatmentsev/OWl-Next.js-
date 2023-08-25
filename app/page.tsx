@@ -1,5 +1,5 @@
 
-import { Htag, Button, Ptag, Tag } from '@/components';
+import { Htag, Button, Ptag, Tag, Rating } from '@/components';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -30,6 +30,7 @@ export default function Home():JSX.Element {
       <Tag size="s" color="green">green</Tag>
       <Tag size="s" color="grey">grey</Tag>
       <Tag size="s" color="primary">primary</Tag>
+      <Rating rating={4}/>
 
       </div>
     </main>
