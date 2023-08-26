@@ -1,6 +1,9 @@
 
+"use client";
+import {useState} from "react";
 import { Htag, Button, Ptag, Tag, Rating } from '@/components';
 import { Metadata } from 'next';
+
 
 export const metadata: Metadata = {
   title: 'Привет-я переопределенный тайтл',
@@ -14,6 +17,7 @@ export const metadata: Metadata = {
 // }
 
 export default function Home():JSX.Element {
+  const [rating,setRating]=useState<number>(4);
   return (
     <main >
       <div >
@@ -30,7 +34,7 @@ export default function Home():JSX.Element {
       <Tag size="s" color="green">green</Tag>
       <Tag size="s" color="grey">grey</Tag>
       <Tag size="s" color="primary">primary</Tag>
-      <Rating rating={4}/>
+      <Rating rating={rating} isEditable={true} setRating={setRating}/>
 
       </div>
     </main>
