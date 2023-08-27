@@ -4,7 +4,6 @@ import { useState, useEffect, KeyboardEvent } from "react";
 import Star from "./star.svg";
 import styles from "./Rating.module.css";
 import cn from "classnames";
-import classNames from "classnames";
 
 export const Rating = ({
   isEditable = false,
@@ -18,6 +17,7 @@ export const Rating = ({
   useEffect(() => {
     constructRating(rating);
   }, [rating]);
+
   const constructRating = (currentRatting: number) => {
     const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
       return (
@@ -42,18 +42,22 @@ export const Rating = ({
     setRatingArray(updatedArray);
   };
 
+
   const changeDisplay = (i: number) => {
     if (!isEditable) {
       return;
     }
     constructRating(i);
   };
+
+
   const onClickRating = (i: number) => {
     if (!isEditable || !setRating) {
       return;
     }
     setRating(i);
   };
+  
 
   const handleSpace = (i: number, e: KeyboardEvent<SVGAElement>) => {
     if (e.code !== "Space" || !setRating) {
@@ -61,6 +65,8 @@ export const Rating = ({
     }
     setRating(i);
   };
+
+  
   return (
     <div {...props}>
       {ratingArray.map((r, i) => (
