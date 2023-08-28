@@ -3,7 +3,7 @@
 import {useState} from "react";
 import { Htag, Button, Ptag, Tag, Rating } from '@/components';
 import { Metadata } from 'next';
-import { Layout, withLayout } from "@/layout/Layout";
+import { withLayout } from "@/layout/Layout";
 
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 //  };
 // }
 
-export default function Home():JSX.Element {
+function Home():JSX.Element {
   const [rating,setRating]=useState<number>(4);
   return (
     <>
@@ -45,4 +45,4 @@ export default function Home():JSX.Element {
 }
 
 
-// export default withLayout(Home);
+export default withLayout(Home);
