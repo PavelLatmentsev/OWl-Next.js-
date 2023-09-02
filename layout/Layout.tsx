@@ -1,7 +1,7 @@
 import { Header } from "./Header/Header";
 import { ILayoutProps } from "./Layout.props";
 import styles from "./Layout.module.css";
-import cn from "classnames";
+// import cn from "classnames";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { Footer } from "./Footer/Footer";
 import { FunctionComponent } from "react";
