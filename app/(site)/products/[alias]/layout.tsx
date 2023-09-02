@@ -1,4 +1,4 @@
-export default function newsLayout({
+export default function productLayout({
   children,
 }: {
   children: React.ReactNode;

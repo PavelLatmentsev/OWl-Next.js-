@@ -1,4 +1,4 @@
-export const API = {
+ const API = {
 	topPage: {
 		find: process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
 		byAlias: process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/byAlias/'
@@ -10,3 +10,5 @@ export const API = {
 		createDemo: process.env.NEXT_PUBLIC_DOMAIN + '/api/review/create-demo'
 	}
 };
+
+export default API;
