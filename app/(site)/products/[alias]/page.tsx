@@ -1,9 +1,15 @@
+import { getMenu } from "@/api/menu";
 import { getPage } from "@/api/page";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: "Products",
 };
+
+export async function generateStaticParams() {
+  const menu = await getMenu(0);
+  return menu.flatMap(item => item.pages.map(page =>({alias: page.alias})));// генерация статичных параметров
+}
 
 export default async function Products({
   params,
