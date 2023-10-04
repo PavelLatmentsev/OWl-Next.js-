@@ -1,11 +1,8 @@
 
-
-// import {useState} from "react";
 import { Htag, Button, Ptag, Tag } from '@/components';
 import { Metadata } from 'next';
 import { withLayout } from "@/layout/Layout";
-import Menu from './components/menu';
-import { getMenu } from '@/api/menu';
+import Menu from './components/Menu/Menu';
 export const metadata: Metadata = {
   title: 'Привет-я переопределенный тайтл',
   description: 'Новая',
@@ -22,14 +19,13 @@ export const metadata: Metadata = {
 
  async function Home() {
   // const [rating,setRating]=useState<number>(4);
-  const menu = await getMenu(0);
+  // const menu = await getMenu(0);
   return (
     <>
     {/* <main >
       <div > */}
       <main>
         <div>
-          {menu.length}
         <Menu/>
         </div>
       </main>
