@@ -1,6 +1,6 @@
 
 import { Htag, Button, Ptag, Tag } from '@/components';
-import { Metadata } from 'next';
+import {  Metadata } from 'next';
 import { withLayout } from "@/layout/Layout";
 import Menu from './components/Menu/Menu';
 export const metadata: Metadata = {
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 
 
- async function Home() {
+ function Home() {
   // const [rating,setRating]=useState<number>(4);
-  // const menu = await getMenu(0);
+  
   return (
     <>
     {/* <main >
@@ -55,3 +55,4 @@ export const metadata: Metadata = {
 
 
 export default withLayout(Home);
+

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +29,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className={styles.nav}>
           <ul>
-            <li>Курсы</li>
-            <li>Для детей</li>
-            <li>О нас</li>
+          <Link href={"/"}>Главная</Link>
+            <Link href={"/courses"}>Курсы</Link>
+            <Link href={"/products/1"}>Для детей</Link>
+            <Link href={"/about"}>О нас</Link>
+            <Link href={"/products/1"}>Продукт 1</Link>
+            <Link href={"/prаdadasdas"}>О нас 3 </Link>
           </ul>
         </nav>
         {children}

@@ -19,10 +19,11 @@ const firstLevelMenu : FirstLevelMenuItem[] = [
   {route: "products", name: "Продукты", icon: <ProductsIcon/>, id: TopLevelCategory.Products},
 ];
 
-export const Menu = async() => {
-  // const menu = await getMenu(0);
-  const {firstCategory, setMenu} = useContext(AppContext);
-  const menu = await getMenu(0);
+export const Menu = async () => {
+ const {firstCategory, setMenu} = useContext(AppContext);
+
+ const menu = await getMenu(0);
+
   console.log(setMenu);
     console.log("menumenumenumenumenu",menu);
   console.log("firstCategory",firstCategory);
